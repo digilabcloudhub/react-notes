@@ -1,38 +1,95 @@
-.App {
-  text-align: center;
+.container{
+   max-width:960px; 
+  margin-right:auto;
+  margin-left:auto;
+  padding-left: 10px;
+  padding-right:10px;
+  height:100vh;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
+.note{
+  background-color:rgb(247, 245, 137);
+  border-radius: 10px;
+  padding:1em;
+  min-height: 170px;
+  display:flex;
   flex-direction: column;
+  white-space: pre-wrap;
+  justify-content: space-between;
+}
+
+.notes-list{
+  display:grid;
+  grid-gap: 1rem;
+  grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+}
+
+.note.new{
+  background-color: rgb(152, 232, 152);
+}
+
+textarea{
+  border:none;
+  resize: none;
+  background-color: transparent;
+}
+
+textarea:focus{
+  outline:none;
+}
+
+.save{
+  background-color: rgb(227, 227, 227);
+  border:none;
+  border-radius: 10px;
+  padding: 5px 10px;
+}
+.save:hover{
+  cursor:pointer;
+  background-color:rgb(204, 202, 202) ;
+}
+.note-footer{
+  display:flex;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content: space-between;
+}
+.delete-icon{
+  cursor:pointer;
+}
+.search{
+  display: flex;
+  align-items: center;
+  background-color: rgb(210 219 219);
+  border-radius: 15px;
+  padding:5px;
+  margin-bottom: 1.5em;
+}
+.search input{
+  border:none;
+  background-color: transparent;
+  width:100%;
+}
+.search input:hover{
+  outline:none;
 }
 
-.App-link {
-  color: #61dafb;
+.header{
+  display:flex;
+  align-items: center;
+  justify-content: space-between;
+
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+button{
+  border-radius:5px;
+  padding:10px;
+  background-color: #ffcb4b;
+  border:none;
+  font-weight:bold;
+}
+.dark-mode{
+  background-color: black;
+}
+
+.dark-mode h1{
+  color:white;
 }
